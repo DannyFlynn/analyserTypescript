@@ -29,29 +29,6 @@ const MainContainer: React.FC = () => {
     //avr read speed
     const [readingSpeed, setReadingSpeed] = useState<number>(0);
 
-    // Speech synthesis welcome message
-    const speakWelcomeMessage = () => {
-        const welcome = 'Welcome to Word Analyser, you can find out the average word speed, word count, spelling mistakes and much more.';
-        if ('speechSynthesis' in window) {
-
-            const synthesis = window.speechSynthesis;
-            const utterance = new SpeechSynthesisUtterance(welcome);
-            synthesis.speak(utterance);
-
-
-        } else {
-
-            console.log('Text-to-speech not supported in this browser.');
-        }
-
-    };
-
-    useEffect(() => {
-
-        speakWelcomeMessage();
-    }, []);
-
-
     useEffect(() => {
         // Load the saved text from the local storage
         const savedText = localStorage.getItem('savedText');
@@ -84,7 +61,7 @@ const MainContainer: React.FC = () => {
     //uppercase or lowercase uppercase by default
     const handleUpperCase = (): void => {
 
-        setText(uppercase === true ? text.toUpperCase() : text.toLowerCase())
+        setText(uppercase === true ? text.toUpperCase() : text.toLowerCase());
         setUppercase(!uppercase);
 
     }

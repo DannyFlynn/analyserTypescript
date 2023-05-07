@@ -6,7 +6,7 @@ const Header: React.FC = () => {
         <React.Fragment>
             <Navbar bg="light" variant="light">
                 <div className='w-100 d-flex p-1'>
-                    <Navbar.Brand className='p-1 w-50 d-flex d-flex justify-content-start' href="#home">Word Count</Navbar.Brand>
+                    <Navbar.Brand className='p-1 w-50 d-flex d-flex justify-content-start' href="#home">Word Analyser</Navbar.Brand>
                 </div>
             </Navbar>
         </React.Fragment>
